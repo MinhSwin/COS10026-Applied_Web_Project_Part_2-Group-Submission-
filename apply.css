@@ -1,0 +1,121 @@
+/*
+
+filename: [apply.css]
+
+author: [Minh Tran]
+
+created: [27/03/2026]
+
+last modified: [07/04/2026]
+
+description: [Refers to apply.html page. For styling the apply.html]
+
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Using form as container*/
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* identity portion*/
+.identity {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* location portion*/
+.location {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 40%;
+    
+}
+
+.location label {
+    color: green;
+}
+
+
+
+/* skills portion*/
+.skills {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 200px;
+}
+.skills label {
+    color: darkblue;
+}
+
+textarea {
+    width: 15em;
+    height: 5em;
+}
+
+/* reset and submit*/
+
+/* div for buttons*/
+.end-button {
+    display: inline-block;
+    margin: 10px;
+}
+
+#submit-but {
+    background-color: green;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.5em;
+    /* the width change takes 0.5s*/
+    transition: width 0.5s;
+}
+/* when the submit is hoverd over the width increases and the background changes colour*/
+#submit-but:hover {
+    background-color: lightgreen;
+    width: 110px;
+}
+
+
+#reset-but {
+    background-color: red;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.5em;
+    transition: width 0.5s;
+}
+/* when the reset is hoverd over the width increases and the background changes colour*/
+#reset-but:hover {
+    background-color: lightcoral;
+    width: 110px;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    /*Makes the buttons smaller and font smaller for smaller screens*/
+    #reset-but , #submit-but{
+        width: 90px;
+        height: 50px;
+        font-size: 1em;
+    }
+    /*aligns contacts in a column for screens with a width of 768px*/
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+}
+

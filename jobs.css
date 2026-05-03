@@ -1,0 +1,87 @@
+/*Styling for aside*/
+aside {
+    color: black;
+    float: right;
+    width: 25%;
+    margin: 20px;
+    padding: 15px;
+    border: 2px solid black;
+    background-color: lightgreen;
+}
+/*Header*/
+header h1 {
+    margin-bottom: 15px;
+    color: white;
+}
+
+header {
+    text-align: center;
+}
+
+/*Styling of the job*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7f5;
+    color: black;
+    padding: 20px;
+}
+
+h2, h3, h4 {
+    color: green;
+    margin-bottom: 10px;
+}
+
+.job {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.job-details section {
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/*Footer setting*/
+footer {
+    background-color: darkgreen;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    color: white;
+}
+
+footer p {
+    color: white;
+    font-size: 0.95em;
+    margin: 0 auto;
+}
+
+/*Responsive design for smaller device */
+@media only screen and (max-width: 768px) {
+    .job {
+        width: 80%;
+        padding: 15px;
+    }
+
+    header {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}
+

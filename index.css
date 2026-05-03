@@ -1,0 +1,96 @@
+/* GENERAL PAGE STYLING */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+
+    /* A fixed background image */
+    background-image: url("images/background image Wind turbines.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+/* The logo is kept small enough not to dominate the page heading,
+   and rounded corners soften the visual style slightly. */
+.logo {
+    width: 120px;
+    border-radius: 10px;
+}
+
+
+/* Links are styled plainly so the menu feels clean */
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* The hover underline gives a simple visual cue that the links are interactive. */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN CONTENT
+   A semi-transparent white panel improves contrast and readability against the photo background. */
+main {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* The main image is responsive so it scales down on smaller screens.
+   The max-width prevents it from becoming too wide on large screens. */
+.main-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* TABLE
+   The table spans the available width */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Borders and padding make the data easier to read and separate visually. */
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* The caption acts like a title for the table, so it is emphasised slightly. */
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* FORM
+   Inputs and buttons share spacing so the search box feels cleaner. */
+input, button {
+    padding: 8px;
+    margin: 5px;
+}
+
+/* ACKNOWLEDGEMENT SECTION
+   This section is highlighted differently so it stands out. */
+.acknowledgement {
+    background-color: #e8f5e9;
+    border-left: 5px solid green;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* FOOTER
+   The footer repeats the green brand colour to visually close the page. */
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

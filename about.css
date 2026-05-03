@@ -1,0 +1,139 @@
+/*
+
+filename: [about.css]
+
+author: [Sereyboth Sok]
+
+created: [8/03/2026]
+
+last modified: [17/04/2026]
+
+description: [Refers to about.html page. For styling the about.html]
+
+*/
+
+/* Page background */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+
+    /* Background image */
+    background-image: url("images/background image Wind turbines.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* MAIN */
+
+main {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* HEADER */
+header 
+{
+    background-color: rgba(27, 94, 32, 0.9);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 20px;
+}
+ul {
+    list-style-type: square;
+    padding-left: 30px;
+}
+.about-list {
+    text-align: center;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ACKNOWLEDGEMENT */
+
+.acknowledgement {
+    
+    border-left: 5px solid green;
+    padding: 15px;
+    margin-top: 20px;
+}
+/* Table */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.table th,
+.table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.table th {
+    font-weight: bold;
+}
+/* Caption spacing */
+.table caption {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Center the image */
+.web-group {
+    display: block;
+    margin: 10px auto;
+    width: 600px;
+    height: 400px;
+}
+
+/* Improve spacing */
+section {
+    margin-bottom: 20px;
+}
+
+/* Definition list spacing */
+dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+/* FOOTER */
+
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
