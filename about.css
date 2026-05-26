@@ -1,40 +1,90 @@
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    overflow-x: auto;
-    display: block;
+
+/* ABOUT PAGE ONLY STYLES */
+
+/* Universal box-sizing for consistent layouts */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-.table th,
-.table td {
-    border: 1px solid black;
-    padding: 8px;
+/* -----------------------------
+   PAGE SECTIONS
+----------------------------- */
+
+section {
+    margin-bottom: 45px;
+    padding: 10px 0;
+}
+
+h2 {
+    margin-bottom: 12px;
+}
+
+/* -----------------------------
+   PAGE NAVIGATION (FIXED + IMPROVED UI)
+----------------------------- */
+
+.page-nav {
+    background-color: white;
+    padding: 12px 15px;
+    margin: 20px auto;
+
+    max-width: 1000px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
     text-align: center;
 }
 
+.page-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.page-nav li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+.page-nav a {
+    color: #1b5e20;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.page-nav a:hover {
+    text-decoration: underline;
+}
+
+/* ACCESSIBILITY FOCUS */
+.page-nav a:focus {
+    outline: 2px solid #90ee90;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* -----------------------------
+   IMAGE
+----------------------------- */
+
 .web-group {
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
 
-    width: 600px;
-    height: 400px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
 
-    object-fit: cover;
+    border-radius: 8px;
 }
 
-section {
-    margin-bottom: 40px;
-}
-
-dt {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-dd {
-    margin-left: 20px;
-    margin-bottom: 10px;
-}
+/* -----------------------------
+   ABOUT LIST
+----------------------------- */
 
 .about-list {
     text-align: center;
@@ -42,43 +92,99 @@ dd {
     padding-left: 0;
 }
 
-/* ACCESSIBILITY FOCUS STATES */
+/* -----------------------------
+   DEFINITION LIST
+----------------------------- */
 
-nav a:focus {
-    outline: 2px solid #90ee90;
-
-    outline-offset: 3px;
-
-    border-radius: 3px;
+dt {
+    font-weight: bold;
+    margin-top: 15px;
 }
-/* FOOTER */
 
-footer {
-    background-color: green;
-    color: white;
+dd {
+    margin-left: 20px;
+    margin-bottom: 12px;
+}
 
-    text-align: center;
+/* -----------------------------
+   TABLE (IMPROVED READABILITY)
+----------------------------- */
 
-    padding: 30px 20px;
-
-    margin-top: 40px;
-
+.table {
     width: 100%;
-
-    box-sizing: border-box;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-footer h2 {
-    margin-top: 0;
-    font-size: 2em;
+.table th,
+.table td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
 }
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* -----------------------------
+   GLOBAL PAGE LAYOUT FIX
+----------------------------- */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+#main-content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+
+    background-color: white;
+    color: black;
+}
+
+/* -----------------------------
+   ACKNOWLEDGEMENT (IMPROVED VISUAL EMPHASIS)
+----------------------------- */
 
 .acknowledgement {
-    margin: 0 auto;
+    background-color: #e8f5e9;
+    border-left: 5px solid green;
+    padding: 15px;
+    margin-top: 20px;
+}
 
-    max-width: 1200px;
+/* -----------------------------
+   RESPONSIVE DESIGN
+----------------------------- */
 
-    line-height: 1.6;
+@media only screen and (max-width: 768px) {
 
-    font-size: 1.1em;
+    .web-group {
+        max-width: 100%;
+    }
+
+    .page-nav li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .table {
+        font-size: 0.9em;
+    }
+
+    dt {
+        font-size: 1em;
+    }
+
+    dd {
+        font-size: 0.95em;
+    }
 }

@@ -24,6 +24,16 @@ nav ul li {
     display: inline-block;
     margin: 10px;
 }
+/* Links are styled plainly so the menu feels clean */
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* The hover underline gives a simple visual cue that the links are interactive. */
+nav a:hover {
+    text-decoration: underline;
+}
 /*sets font and font size*/
 footer {
     font-family: Arial, Helvetica, sans-serif;
