@@ -41,3 +41,44 @@ dd {
     list-style-position: inside;
     padding-left: 0;
 }
+
+/* ACCESSIBILITY FOCUS STATES */
+
+nav a:focus {
+    outline: 2px solid #90ee90;
+
+    outline-offset: 3px;
+
+    border-radius: 3px;
+}
+/* FOOTER */
+
+footer {
+    background-color: green;
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    margin-top: 40px;
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+footer h2 {
+    margin-top: 0;
+    font-size: 2em;
+}
+
+.acknowledgement {
+    margin: 0 auto;
+
+    max-width: 1200px;
+
+    line-height: 1.6;
+
+    font-size: 1.1em;
+}
