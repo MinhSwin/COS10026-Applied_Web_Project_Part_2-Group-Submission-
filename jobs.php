@@ -1,53 +1,37 @@
-<?php require_once("settings.php");?>
+<?php require_once("settings.php"); ?>
 <?php include 'header.inc'; ?>
 <link rel="stylesheet" href="styles/jobs.css">
 </head>
+ 
+<main>
+ 
 <?php
-$host = "localhost";
-$user = "root";
-$pwd = "";
-$sql_db = "jobs";
-
-$conn = mysqli_connect($host, $user, $pwd, $sql_db);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
 $search = "";
-
+ 
 if (isset($_GET['search'])) {
     $search = $_GET['search'];
 }
-
-$sql = "SELECT * FROM jobs_list";
-
+ 
 if ($search != "") {
-    $sql .= " WHERE job_title LIKE '%$search%' OR reference_code LIKE '%$search%'";
+    $stmt = $conn->prepare("SELECT * FROM jobs_list WHERE job_title LIKE ? OR reference_code LIKE ?");
+    $like = "%" . $search . "%";
+    $stmt->bind_param("ss", $like, $like);
+    $stmt->execute();
+    $result = $stmt->get_result();
+} else {
+    $result = mysqli_query($conn, "SELECT * FROM jobs_list");
 }
-
-$result = mysqli_query($conn, $sql);
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Jobs</title>
-    <link rel="stylesheet" href="job.css">
-</head>
-
-<body>
-<?php include 'header.inc'; ?>
-
+ 
 <h1>Jobs</h1>
-
+ 
 <form method="GET">
-    <input type="text" name="search" placeholder="Search jobs..." value="<?php echo $search; ?>">
+    <input type="text" name="search" placeholder="Search jobs..." value="<?php echo htmlspecialchars($search); ?>">
     <button type="submit">Search</button>
 </form>
+ 
+<h2>Jobs Available:</h2>
 
-<h2>Jobs Avaliable:</h2>
 <?php
 if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
@@ -64,11 +48,10 @@ if (mysqli_num_rows($result) > 0) {
         echo "<hr>";
     }
 } else {
-    echo "No jobs found.";
+    echo "<p>No jobs found.</p>";
 }
 ?>
-<!-- This acknowledgement is included to meet the assignment requirement.
-     It is placed on the homepage so it is visible to all visitors. -->
+ 
 <section class="acknowledgement">
     <h2>Acknowledgement of Country</h2>
     <p>
@@ -77,8 +60,7 @@ if (mysqli_num_rows($result) > 0) {
         Strait Islander peoples through inclusive employment and sustainable partnerships.
     </p>
 </section>
-
+ 
+</main>
+ 
 <?php include 'footer.inc'; ?>
-
-</body>
-</html>

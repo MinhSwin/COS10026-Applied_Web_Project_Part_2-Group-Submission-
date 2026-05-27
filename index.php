@@ -20,7 +20,7 @@
 
     <section>
         <h2>Search Opportunities</h2>
-        <form action="jobs.html" method="get">
+        <form action="jobs.php" method="get">
             <label for="search">Search jobs:</label>
             <input type="text" id="search" name="search" placeholder="Search job titles">
             <button type="submit">Search</button>
