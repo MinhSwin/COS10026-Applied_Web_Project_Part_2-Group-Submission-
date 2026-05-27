@@ -2,21 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- These meta tags help describe the page to browsers and search engines -->
+
+    <!-- Meta information for SEO and accessibility -->
     <meta name="description" content="Sustainable Energy Solutions Company">
     <meta name="keywords" content="renewable energy, solar, wind">
-    <meta name="author" content="Kevin Devaiah Baliyamederira Vinod,Sereyboth Sok ,Minh Tran ,Jack Nguyen">
-    <!-- This viewport setting is what allows the layout to scale properly on phones and tablets -->
+    <meta name="author" content="Kevin Devaiah Baliyamederira Vinod, Sereyboth Sok, Minh Tran, Jack Nguyen">
+
+    <!-- Responsive layout -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sustainable Energy Solutions</title>
 
-    <link rel="stylesheet" href="styles/index.css">
+    <!-- CSS files (shared across all pages) -->
     <link rel="stylesheet" href="styles/style.css">
-
-    <!-- Internal CSS is included because the assignment requires at least one example on each page -->
+    
+    <!-- Internal CSS (required by assignment) -->
     <style>
-        /* The slogan is styled separately sto stand out from the background */
         .slogan {
             font-style: italic;
             color: #76fa7d;
@@ -27,16 +28,15 @@
 <body>
 
 <header>
-    <!-- The logo gives the company an identity at the top of the page.
-         Alt text is included so the image still has meaning for screen readers and if it fails to load. -->
+    <!-- Company logo -->
     <img src="images/green-energy-logo.webp" alt="Solar energy logo" class="logo">
 
-    <!-- The h1 is the main heading of the page and identifies the company clearly -->
+    <!-- Main title -->
     <h1>Sustainable Energy Solutions</h1>
 
-    <!-- The slogan supports branding and gives the homepage a more professional feel -->
+    <!-- Company slogan -->
     <p class="slogan">Powering a Greener Tomorrow</p>
 
-    <!-- Navigation is placed in the header so users can move to other pages -->
+    <!-- Navigation menu -->
     <?php include 'nav.inc'; ?>
 </header>

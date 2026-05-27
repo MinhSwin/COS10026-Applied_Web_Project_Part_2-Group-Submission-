@@ -1,4 +1,10 @@
+<?php require_once("settings.php"); ?>
 <?php include 'header.inc'; ?>
+<link rel="stylesheet" href="styles/apply.css">
+</head>
+
+<main>
+
     <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
 
         <!--Identification portion-->
@@ -15,15 +21,15 @@
 
             <p><label for="date-of-birth">Date of Birth</label></p>
             <input type="text" id="date-of-birth" name="date-of-birth" placeholder="dd/mm/yyyy" pattern="\d{1,2}\/\d{1,2}\/\d{4}" required>
-            
+
             <fieldset>
                 <legend>Gender</legend>
                 <label for="male">Male<input type="radio" id="male" name="gender" value="male" required></label>
                 <label for="female">Female<input type="radio" id="female" name="gender" value="female" required></label>
                 <label for="non-binary">Non-binary<input type="radio" id="non-binary" name="gender" value="non-binary" required></label>
-                <label for="not-answer">Prefer not to say<input type="radio" id="not-answer" name="gender" value="prefer-not-to-say" required></label>  
+                <label for="not-answer">Prefer not to say<input type="radio" id="not-answer" name="gender" value="prefer-not-to-say" required></label>
             </fieldset>
-          
+
         </fieldset>
 
         <!--Location-->
@@ -41,9 +47,9 @@
                 <option value="act">Australian Capital Territory</option>
                 <option value="nsw">New South Wales</option>
                 <option value="nt">Northern Territory</option>
-                <option value="sa">South Australia</option> 
+                <option value="sa">South Australia</option>
                 <option value="tas">Tasmania</option>
-                <option value="vic">Victoria</option>      
+                <option value="vic">Victoria</option>
                 <option value="wa">Western Australia</option>
             </select>
 
@@ -51,7 +57,7 @@
             <input type="text" id="postcode" name="postcode" pattern="[0-9]+" minlength="4" maxlength="4" required>
         </fieldset>
 
-        <!--contacts-->
+        <!--Contacts-->
         <fieldset class="contact">
             <legend>Contact</legend>
             <label for="email">Email</label>
@@ -61,28 +67,25 @@
             <input type="text" id="phone-number" name="phone-number" pattern="[0-9]+" minlength="8" maxlength="12" required>
         </fieldset>
 
-        <!--skills-->
+        <!--Skills-->
         <fieldset class="skills">
             <legend>Skills</legend>
             <label for="gardening"><input type="checkbox" name="skill[]" id="gardening" value="gardening">Gardening</label>
-            <label for="commmunication"><input type="checkbox" name="skill[]" id="commmunication" value="commmunication" >Communication</label>
+            <label for="communication"><input type="checkbox" name="skill[]" id="communication" value="communication">Communication</label>
             <label for="coding"><input type="checkbox" name="skill[]" id="coding" value="coding">Coding</label>
             <label for="running"><input type="checkbox" name="skill[]" id="running" value="running">Running</label>
             <label for="other">Other:</label>
             <textarea name="other" id="other" placeholder="Enter other skills here"></textarea>
         </fieldset>
-        
+
         <!--Submit and reset buttons-->
         <div class="end-button">
             <input id="submit-but" name="submit-but" type="submit" value="Submit">
             <input id="reset-but" name="reset-but" type="reset" value="Reset">
         </div>
-        
+
     </form>
 
-
-    <!-- This acknowledgement is included to meet the assignment requirement.
-         It is placed on the homepage so it is visible to all visitors. -->
     <section class="acknowledgement">
         <h2>Acknowledgement of Country</h2>
         <p>
@@ -91,8 +94,7 @@
             Strait Islander peoples through inclusive employment and sustainable partnerships.
         </p>
     </section>
+
+</main>
+
 <?php include 'footer.inc'; ?>
-    
-    
-</body>
-</html>
