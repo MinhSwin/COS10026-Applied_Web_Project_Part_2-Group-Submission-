@@ -1,4 +1,9 @@
 <?php include 'header.inc'; ?>
+<link rel="stylesheet" href="styles/index.css">
+</head>
+<?php require_once "settings.php"; ?>
+
+
 <main>
 
     <section style="margin: 20px;">
