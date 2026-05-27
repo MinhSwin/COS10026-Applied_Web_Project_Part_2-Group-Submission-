@@ -1,17 +1,8 @@
+<?php require_once("settings.php"); ?>
 <?php
 session_start();
-$host = "localhost";
-$user = "root";
-$pwd = "";
-$sql_db = "jobs";
 
-$conn = mysqli_connect("localhost", "root", "", "jobs");
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-$error = "";
+$error = ""; // FIX 1: define error early
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
@@ -31,14 +22,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             header("Location: manage.php");
             exit();
+
         } else {
             $error = "Invalid password";
         }
+
     } else {
         $error = "User not found";
     }
 }
 ?>
+
 <?php include 'header.inc'; ?>
 
 <body>
@@ -57,8 +51,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </form>
 
+<!-- FIX 2: safer error output -->
 <p style="color:red;">
-    <?php echo $error; ?>
+    <?php if (!empty($error)) { echo $error; } ?>
 </p>
 
 <!-- This acknowledgement is included to meet the assignment requirement.
