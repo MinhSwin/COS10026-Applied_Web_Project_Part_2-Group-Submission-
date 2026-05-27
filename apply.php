@@ -1,43 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="description" content="Apply website">
-    <meta name="keywords" content="HTML, Form, tags">
-    <meta name="author" content="Minh Tran">
-    <link rel="stylesheet" href="apply.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Apply</title>
-
-    <!--Embedded CSS requirement which centers the text for the footer-->
-    <style>
-        footer {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            background-color: darkgreen;
-            color: white;
-        }
-    </style>
-
-</head>
-<body>
-    <!--Common header section for all pages-->
-    <header>
-        <img id="logo" src="images/green-energy-logo.webp" 
-         alt="Company Logo" class="logo">
-        <h1>Apply to G03</h1>
-        <!--Navbar for other pages-->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="apply.html">Apply</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
-
+<?php include 'header.inc'; ?>
     <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
 
         <!--Identification portion-->
@@ -120,16 +81,17 @@
     </form>
 
 
-
-    <!--Acknowledgement of traditional owners of the land at the bottom of the page-->
-    
-    <footer>
-        <h2 id="acknowledgement-header">Acknowledgement of Country</h2>
-        <p id="acknowledgement">We acknowledge the Traditional Owners of the land on which we operate and pay our respects 
+    <!-- This acknowledgement is included to meet the assignment requirement.
+         It is placed on the homepage so it is visible to all visitors. -->
+    <section class="acknowledgement">
+        <h2>Acknowledgement of Country</h2>
+        <p>
+            We acknowledge the Traditional Owners of the land on which we operate and pay our respects 
             to Elders past, present and emerging. We are committed to supporting Aboriginal and Torres 
-            Strait Islander peoples through inclusive employment and sustainable partnerships.</p>
-    </footer>
-
+            Strait Islander peoples through inclusive employment and sustainable partnerships.
+        </p>
+    </section>
+<?php include 'footer.inc'; ?>
     
     
 </body>

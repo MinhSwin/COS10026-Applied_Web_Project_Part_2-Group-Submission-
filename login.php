@@ -39,12 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-</head>
+<?php include 'header.inc'; ?>
 
 <body>
 
@@ -65,6 +60,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <p style="color:red;">
     <?php echo $error; ?>
 </p>
+
+<!-- This acknowledgement is included to meet the assignment requirement.
+     It is placed on the homepage so it is visible to all visitors. -->
+<section class="acknowledgement">
+    <h2>Acknowledgement of Country</h2>
+    <p>
+        We acknowledge the Traditional Owners of the land on which we operate and pay our respects 
+        to Elders past, present and emerging. We are committed to supporting Aboriginal and Torres 
+        Strait Islander peoples through inclusive employment and sustainable partnerships.
+    </p>
+</section>
+
+<?php include 'footer.inc'; ?>
 
 </body>
 </html>

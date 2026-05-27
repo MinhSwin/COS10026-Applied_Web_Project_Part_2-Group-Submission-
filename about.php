@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="description" content="About Sustainable Energy Solutions">
-    <meta name="keywords" content="HTML, About, Sustainable Energy">
-    <meta name="author" content="Sereyboth Sok">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
-
-    <title>About Us</title>
-</head>
-
+<?php include 'header.inc'; ?>
 <body>
 <header role="banner">
     <img id="logo" src="images/green-energy-logo.webp" alt="Solar energy company logo">
@@ -121,12 +107,20 @@
     </section>
 
 </main>
-<footer class="acknowledgement" role="contentinfo">
-    <h2>Acknowledgement of Country</h2>
-    <p>
-        We acknowledge the Traditional Owners of the land and pay respect
-        to Elders past, present and emerging.
-    </p>
-</footer>
+
+    <!-- This acknowledgement is included to meet the assignment requirement.
+         It is placed on the homepage so it is visible to all visitors. -->
+    <section class="acknowledgement">
+        <h2>Acknowledgement of Country</h2>
+        <p>
+        We acknowledge the Traditional Owners and Custodians of the land on which we live and work. 
+        We pay our respects to Elders past, present, and emerging, and recognise their continuing connection to land, waters, and community.
+        We are committed to fostering respect for Aboriginal and Torres Strait Islander peoples and supporting reconciliation through inclusive practices, meaningful engagement, and equitable opportunities.
+    
+        This Acknowledgement of Country reflects our respect for Aboriginal and Torres Strait Islander peoples as the First Peoples of Australia. 
+        It is included to recognise their ongoing connection to land and culture and to demonstrate our commitment to inclusive and respectful practices within our organisation.
+        </p>
+    </section>
+<?php include 'footer.inc'; ?>
 </body>
 </html>
