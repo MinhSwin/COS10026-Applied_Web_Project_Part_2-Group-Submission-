@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'header.inc'; ?>
 <main>
     <!-- This section introduces the company and explains what it does.
          Inline CSS is used here only because the assignment requires at least one inline example. -->

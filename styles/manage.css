@@ -1,0 +1,130 @@
+
+
+/* Main page layout */
+main {
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: 20px;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* Section spacing */
+section {
+    margin-bottom: 35px;
+}
+
+/* Section headings */
+section h2 {
+    color: #1b5e20;
+    border-bottom: 2px solid #1b5e20;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Forms are grouped visually so each HR action feels separate */
+form {
+    background-color: #f4f7f5;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* Inputs and dropdowns */
+input[type="text"],
+input[type="number"],
+select {
+    width: 250px;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Buttons */
+input[type="submit"] {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Hover effect improves usability feedback */
+input[type="submit"]:hover {
+    background-color: #1b5e20;
+}
+
+/* Result messages */
+strong {
+    color: #1b5e20;
+}
+
+/* Table layout */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+/* Table headings */
+th {
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+/* Table cells */
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    vertical-align: top;
+}
+
+/* Zebra striping improves readability across large datasets */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover highlight helps track rows more easily */
+tr:hover {
+    background-color: #dcedc8;
+}
+
+/* Responsive layout for smaller screens */
+@media only screen and (max-width: 768px) {
+
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th,
+    td {
+        font-size: 14px;
+    }
+}

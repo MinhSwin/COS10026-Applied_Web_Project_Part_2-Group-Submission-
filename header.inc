@@ -11,8 +11,8 @@
 
     <title>Sustainable Energy Solutions</title>
 
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/style.css">
 
     <!-- Internal CSS is included because the assignment requires at least one example on each page -->
     <style>
