@@ -1,9 +1,8 @@
 
+<?php require_once("settings.php");?>
 <?php include 'header.inc'; ?>
 <link rel="stylesheet" href="styles/about.css">
 </head>
-<?php require_once("settings.php"); ?>
-
 <main id="main-content">
 
     <nav class="page-nav" aria-label="Page sections">

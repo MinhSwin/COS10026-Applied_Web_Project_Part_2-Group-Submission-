@@ -1,6 +1,7 @@
 <?php require_once("settings.php");?>
 <?php include 'header.inc'; ?>
-<?php require_once("settings.php"); ?>
+<link rel="stylesheet" href="styles/apply.css">
+</head>
     <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
 
         <!--Identification portion-->

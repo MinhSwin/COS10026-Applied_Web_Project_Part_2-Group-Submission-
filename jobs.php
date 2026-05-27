@@ -1,4 +1,7 @@
 <?php require_once("settings.php");?>
+<?php include 'header.inc'; ?>
+<link rel="stylesheet" href="styles/jobs.css">
+</head>
 <?php
 $host = "localhost";
 $user = "root";
