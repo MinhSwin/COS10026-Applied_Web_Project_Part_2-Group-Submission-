@@ -26,14 +26,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 <?php include 'header.inc'; ?>
-<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/login.css">
+
 </head>
 
 <main>
 
 <h2>Login</h2>
 
-<form method="POST">
+<form method="POST" class="login-form">
     <label>Username:</label><br>
     <input type="text" name="username" required><br><br>
 
