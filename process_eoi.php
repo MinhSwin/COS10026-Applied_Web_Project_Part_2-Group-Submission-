@@ -107,9 +107,7 @@
             $errors[] = "Phone number must contain 8 to 12 digits.";
         }
 
-/*
-    Display validation errors
-*/
+        //display error
         if (!empty($errors)) {
 
             include 'header.inc';           
@@ -128,6 +126,49 @@
 
             exit();
         }
+        
+
+
+        //insert into database
+        $query = "INSERT INTO eoi (job_reference, first_name, last_name, date_of_birth, gender,
+        street_address, suburb, state, postcode,email, phone, skills, other_skills, status)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'New')";
+
+        $stmt = $conn->prepare($query);
+
+        $stmt->bind_param(
+            "sssssssssssss",
+            $job_ref,
+            $first_name,
+            $last_name,
+            $dob,
+            $gender,
+            $street,
+            $suburb,
+            $state,
+            $postcode,
+            $email,
+            $phone,
+            $skills,
+            $other
+        );
+
+        if ($stmt->execute()) {
+
+            $eoi_number = $conn->insert_id;
+
+            include 'header.inc';    
+            echo "<h1>Application Submitted Successfully</h1>";
+            echo "<p>Thank you $first_name $last_name.</p>";
+            echo "<p>Your EOI Number is: <strong>$eoi_number</strong></p>";
+            include 'footer.inc';
+
+        } else {
+
+            echo "Database error: " . $conn->error;
+        }
+
+        mysqli_close($conn);
     ?>
 
 
