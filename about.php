@@ -42,7 +42,7 @@
 
             <dt>Minh Tran</dt>
             <dd>
-                Developed jobs page.<br>
+                Developed apply page.<br>
                 <q>Do something today your future self will thank you for.</q>
             </dd>
 
@@ -54,7 +54,7 @@
 
             <dt>Jack Nguyen</dt>
             <dd>
-                Worked on project development.<br>
+                Developed jobs page.<br>
                 <q>Dream big and dare to fail.</q>
             </dd>
         </dl>

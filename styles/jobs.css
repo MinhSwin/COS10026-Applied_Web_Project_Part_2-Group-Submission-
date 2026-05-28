@@ -85,3 +85,10 @@ footer p {
     }
 }
 
+img.logo {
+    width: 120px !important; 
+    height: auto !important;
+    border-radius: 10px !important;
+}
+
+

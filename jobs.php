@@ -1,8 +1,6 @@
 <?php require_once("settings.php"); ?>
 <?php include 'header.inc'; ?>
 <link rel="stylesheet" href="styles/jobs.css">
-</head>
- 
 <main>
  
 <?php
