@@ -5,29 +5,29 @@
 
 <main>
 
-    <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+    <form action="process_eoi.php" method="post">
 
         <!--Identification portion-->
         <fieldset class="identity">
             <legend>Identification</legend>
             <label for="job-ref">Job Reference Number</label>
-            <input type="text" id="job-ref" name="job-ref" minlength="5" maxlength="5" required>
+            <input type="text" id="job-ref" name="job-ref" minlength="5" maxlength="5">
 
             <label for="first-name">First Name</label>
-            <input type="text" pattern="[A-Za-z]+" id="first-name" name="first-name" maxlength="20" required>
+            <input type="text" pattern="[A-Za-z]+" id="first-name" name="first-name" maxlength="20">
 
             <label for="last-name">Last Name</label>
-            <input type="text" pattern="[A-Za-z]+" id="last-name" name="last-name" maxlength="20" required>
+            <input type="text" pattern="[A-Za-z]+" id="last-name" name="last-name" maxlength="20">
 
             <p><label for="date-of-birth">Date of Birth</label></p>
-            <input type="text" id="date-of-birth" name="date-of-birth" placeholder="dd/mm/yyyy" pattern="\d{1,2}\/\d{1,2}\/\d{4}" required>
+            <input type="text" id="date-of-birth" name="date-of-birth" placeholder="dd/mm/yyyy" pattern="\d{1,2}\/\d{1,2}\/\d{4}">
 
             <fieldset>
                 <legend>Gender</legend>
-                <label for="male">Male<input type="radio" id="male" name="gender" value="male" required></label>
-                <label for="female">Female<input type="radio" id="female" name="gender" value="female" required></label>
-                <label for="non-binary">Non-binary<input type="radio" id="non-binary" name="gender" value="non-binary" required></label>
-                <label for="not-answer">Prefer not to say<input type="radio" id="not-answer" name="gender" value="prefer-not-to-say" required></label>
+                <label for="male">Male<input type="radio" id="male" name="gender" value="male"></label>
+                <label for="female">Female<input type="radio" id="female" name="gender" value="female"></label>
+                <label for="non-binary">Non-binary<input type="radio" id="non-binary" name="gender" value="non-binary"></label>
+                <label for="not-answer">Prefer not to say<input type="radio" id="not-answer" name="gender" value="prefer-not-to-say"></label>
             </fieldset>
 
         </fieldset>
@@ -36,13 +36,13 @@
         <fieldset class="location">
             <legend>Location</legend>
             <label for="street-address">Street address</label>
-            <input type="text" id="street-address" name="street-address" maxlength="40" required>
+            <input type="text" id="street-address" name="street-address" maxlength="40">
 
             <label for="suburb">Suburb</label>
-            <input type="text" id="suburb" name="suburb" maxlength="40" required>
+            <input type="text" id="suburb" name="suburb" maxlength="40">
 
             <label for="state">State</label>
-            <select name="state" id="state" required>
+            <select name="state" id="state">
                 <option value="">Please select a State</option>
                 <option value="act">Australian Capital Territory</option>
                 <option value="nsw">New South Wales</option>
@@ -54,17 +54,17 @@
             </select>
 
             <label for="postcode">Post Code</label>
-            <input type="text" id="postcode" name="postcode" pattern="[0-9]+" minlength="4" maxlength="4" required>
+            <input type="text" id="postcode" name="postcode" pattern="[0-9]+" minlength="4" maxlength="4">
         </fieldset>
 
         <!--Contacts-->
         <fieldset class="contact">
             <legend>Contact</legend>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
+            <input type="text" name="email" id="email">
 
             <label for="phone-number">Phone number</label>
-            <input type="text" id="phone-number" name="phone-number" pattern="[0-9]+" minlength="8" maxlength="12" required>
+            <input type="text" id="phone-number" name="phone-number" pattern="[0-9]+" minlength="8" maxlength="12">
         </fieldset>
 
         <!--Skills-->
