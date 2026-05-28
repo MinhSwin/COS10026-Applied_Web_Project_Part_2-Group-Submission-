@@ -96,11 +96,14 @@ h2 {
 dt {
     font-weight: bold;
     margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
 dd {
-    margin-left: 20px;
-    margin-bottom: 12px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 /* -----------------------------

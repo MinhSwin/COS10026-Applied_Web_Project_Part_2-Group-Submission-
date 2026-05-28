@@ -1,10 +1,19 @@
-<?php require_once("settings.php");?>
+<?php require_once("settings.php"); ?>
+
 <?php
 $page = "about";
+
+$conn = mysqli_connect($host, $user, $pwd, $sql_db);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 ?>
+
 <?php include 'header.inc'; ?>
+
 <link rel="stylesheet" href="styles/about.css">
-</head>
+
 <main id="main-content">
 
     <nav class="page-nav" aria-label="Page sections">
@@ -36,29 +45,35 @@ $page = "about";
         <h2>Member Contributions & Quotes</h2>
 
         <dl>
-            <dt>Sereyboth Sok</dt>
-            <dd>
-                Developed about page.<br>
-                <q>Success is not final, failure is not fatal.</q>
-            </dd>
 
-            <dt>Minh Tran</dt>
-            <dd>
-                Developed apply page.<br>
-                <q>Do something today your future self will thank you for.</q>
-            </dd>
+        <?php
 
-            <dt>Kevin Devaiah</dt>
-            <dd>
-                Developed index page.<br>
-                <q>Great things never come from comfort zones.</q>
-            </dd>
+        $sql = "SELECT * FROM about_members";
 
-            <dt>Jack Nguyen</dt>
-            <dd>
-                Developed jobs page.<br>
-                <q>Dream big and dare to fail.</q>
-            </dd>
+        $result = mysqli_query($conn, $sql);
+
+        if ($result) {
+
+            while ($row = mysqli_fetch_assoc($result)) {
+
+                echo "<dt>" . $row['member_name'] . "</dt>";
+
+                echo "<dd>";
+
+                echo "<strong>Project 1:</strong> "
+                     . $row['first_project'] . "<br><br>";
+
+                echo "<strong>Project 2:</strong> "
+                     . $row['second_project'] . "<br><br>";
+
+                echo "<q>" . $row['quote_text'] . "</q>";
+
+                echo "</dd>";
+            }
+        }
+
+        ?>
+
         </dl>
     </section>
 
@@ -99,9 +114,9 @@ $page = "about";
         </table>
     </section>
 
-    <!-- Acknowledgement of Country -->
     <section class="acknowledgement">
         <h2>Acknowledgement of Country</h2>
+
         <p>
             We acknowledge the Traditional Owners and Custodians of the land on which we live and work. 
             We pay our respects to Elders past, present, and emerging, and recognise their continuing connection to land, waters, and community.
@@ -110,4 +125,5 @@ $page = "about";
     </section>
 
 </main>
+
 <?php include 'footer.inc'; ?>
