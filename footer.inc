@@ -1,5 +1,6 @@
 <footer>
     <!-- The footer gathers practical project links in one place -->
+    
     <p>&copy; 2026 Sustainable Energy Solutions</p>
 
     <p>

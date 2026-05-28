@@ -15,6 +15,7 @@
 
     <!-- CSS files (shared across all pages) -->
     <link rel="stylesheet" href="styles/style.css">
+
     
     <!-- Internal CSS (required by assignment) -->
     <style>

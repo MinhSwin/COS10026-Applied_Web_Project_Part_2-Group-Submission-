@@ -1,5 +1,7 @@
-
 <?php require_once("settings.php");?>
+<?php
+$page = "about";
+?>
 <?php include 'header.inc'; ?>
 <link rel="stylesheet" href="styles/about.css">
 </head>
@@ -108,5 +110,4 @@
     </section>
 
 </main>
-
 <?php include 'footer.inc'; ?>

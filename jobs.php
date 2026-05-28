@@ -56,9 +56,11 @@ if (mysqli_num_rows($result) > 0) {
         We acknowledge the Traditional Owners of the land on which we operate and pay our respects 
         to Elders past, present and emerging. We are committed to supporting Aboriginal and Torres 
         Strait Islander peoples through inclusive employment and sustainable partnerships.
+        
     </p>
+
 </section>
- 
+     <br>
 </main>
  
 <?php include 'footer.inc'; ?>
